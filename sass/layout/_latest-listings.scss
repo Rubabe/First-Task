@@ -1,0 +1,121 @@
+.later-listings {
+    font-family: $roboto;
+    .later-listings-wrapper {
+        .section-info {
+            @include section-info;
+        }
+        .card-container {
+            @include container-full;
+            @include flex(flex, row, space-evenly, "", wrap);
+            .card-wrapper {
+                // width: 300px;
+                width: 22%;
+                height: $height-card;
+                min-width: $margin-card;
+                overflow: hidden;
+                border-radius: $border-lg * 2;
+                margin: $margin-lg * 3;
+                @include cursor;
+                &:hover .image-lt {
+                    transform: scale(1.2);
+                }
+                .image-lt {
+                    @include image-fit;
+                    transition: all 0.3s ease;
+                }
+                .heart-customize {
+                    @include heart-customize;
+                }
+                .later-things-gradient {
+                    height: 100%;
+                    width: 100%;
+                    bottom: 0;
+                    background: linear-gradient( 0deg, rgba(76, 170, 222, 0.5) 0%, rgba(76, 170, 222, 0.35) 10%, rgba(76, 170, 222, 0.2) 15%, rgba(206, 209, 215, 0.2) 30%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 1) 100%);
+                }
+                .later-things-content {
+                    bottom: 0;
+                    width: 100%;
+                    .later-things-1 {
+                        @include flex(flex, row, space-evenly, "", "");
+                        border-bottom: $borderwidth-sm solid $white;
+                        padding-bottom: $padding-lg;
+                        .later-things-header {
+                            @include display(block);
+                            @include font($roboto, $font-xl/2, $bold, $white);
+                            padding-top: $padding-lg;
+                            &:hover {
+                                color: $text-main;
+                            }
+                        }
+                        .review-wrapper {
+                            @include flex(flex, row, space-between, "", "");
+                            .review-counter {
+                                background: $bg-button;
+                                @include font($roboto, $font-sm, $bold, $white);
+                                border-radius: $border-md;
+                                padding: $padding-lg * 2;
+                                margin-right: $margin-lg * 2;
+                            }
+                            .review-content {
+                                .stars-row {
+                                    i {
+                                        color: #facc39;
+                                        font-size: $font-xs;
+                                        margin-right: $margin-sm * 2;
+                                        font-weight: $extra-bold;
+                                    }
+                                }
+                                span {
+                                    @include font($roboto, $font-xs, "", $white);
+                                    margin-top: 2;
+                                }
+                            }
+                        }
+                    }
+                    .later-things-2 {
+                        width: 100%;
+                        @include flex(flex, "", space-evenly, center, "");
+                        margin: $margin-lg * 2 0;
+                        .category {
+                            i {
+                                color: $white;
+                                padding: $padding-lg * 2;
+                                border-radius: 50%;
+                                background: #5ecfb1;
+                            }
+                            span {
+                                @include font($roboto, $font-sm, "", $white);
+                                padding-left: $padding-lg;
+                            }
+                        }
+                        .profil {
+                            padding-left: $padding-lg * 2;
+                            span {
+                                @include font($roboto, $font-sm, "", $white);
+                                padding-left: $padding-lg;
+                                border-bottom: $borderwidth-sm solid $white;
+                                i {
+                                    color: #2e8b57;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width: 1260px) {
+                .card-wrapper {
+                    width: 45%;
+                }
+            }
+            @media screen and (max-width: 640px) {
+                .card-wrapper {
+                    @include container-full-margin;
+                    margin-bottom: $margin-lg * 3;
+                }
+            }
+        }
+        .listings-btn {
+            @include listings-btn;
+        }
+    }
+}

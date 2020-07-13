@@ -1,0 +1,82 @@
+.how-it-works {
+    width: 100%;
+    font-family: $roboto;
+    .how-it-works-wrapper {
+        @include section-container;
+        .section-info {
+            @include section-info;
+        }
+        .how-it-works-row {
+            @include flex(flex, "", space-evenly, "", "");
+            @media (max-width: 750px) {
+                @include display(block);
+            }
+            .how-it-works-cards {
+                width: 25%;
+                @include border-line;
+                padding: $padding-xl;
+                border-radius: $border-sm * 2;
+                background: #f9f9f9;
+                @media (max-width: 750px) {
+                    width: 100%;
+                    margin-bottom: $margin-xxl;
+                }
+                .card-image {
+                    @include flex(flex, "", center, "", "");
+                    margin-bottom: $margin-lg * 6;
+                    i {
+                        @extend .absolute;
+                        font-size: $font-xs * 6;
+                        color: $text-main;
+                    }
+                }
+                .card-description {
+                    text-align: center;
+                    margin-bottom: $margin-lg * 6;
+                    h4 {
+                        @include font($roboto, $font-xl/2, $bold, #566985);
+                        margin-bottom: $margin-md * 4;
+                    }
+                    p {
+                        @include font($roboto, $font-sm, "", $text-details);
+                        line-height: $line-height-secondary;
+                    }
+                }
+                .circle {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    @extend .absolute;
+                    z-index: 3;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: $white;
+                    @include border-line;
+                    box-shadow: 0 9px 16px rgba(58, 87, 135, 0.15);
+                    span {
+                        @include font($roboto, $font-sm, $bold, $text-main);
+                        @include bring-center;
+                    }
+                }
+            }
+        }
+        .tick-circle-wrapper {
+            width: 100%;
+            @include flex(flex, "", center, "", "");
+            .tick-circle {
+                margin-top: $margin-xxl * 1.2;
+                width: $width-xxs * 1.5;
+                height: $height-circle;
+                background: $bg-third;
+                border-radius: 50%;
+                box-shadow: 0 0 0 10px #f7f7f7;
+                @include flex(flex, "", center, "", "");
+                i {
+                    font-size: $font-xs * 2;
+                    color: $white;
+                    @include bring-center;
+                }
+            }
+        }
+    }
+}

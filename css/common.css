@@ -1,0 +1,176 @@
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.container-full {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+
+/*  X oxunda yerlesdirme klasslari */
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+
+/* y oxunda yerlesdirme klasslari */
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+/* back-ground colors */
+
+.bg-color-white {
+    background-color: #fff;
+}
+
+.bg-color-lightblue {
+    background-color: $bg-secondary;
+}
+
+.bg-color-darkblue {
+    background-color: hsl(224, 41%, 31%);
+}
+
+.bg-color-blue {
+    background-color: #3d528b;
+}
+
+.bg-color-wishlist-button {
+    background-color: #425998;
+}
+
+.bg-color-gray {
+    background-color: #f9f9f9;
+}
+
+
+/* text colors */
+
+.tcolor-lightblue {
+    color: $text-main;
+}
+
+.tcolor-white {
+    color: #fff;
+}
+
+.tcolor-gray {
+    color: #697891;
+}
+
+.tcolor-blue-gray {
+    color: $text-details;
+}
+
+.tcolor-blue {
+    color: #3d528b;
+}
+
+.tcolor-wishlist {
+    color: #425998;
+}
+
+.tcolor-darkgray {
+    color: #667891;
+}
+
+
+/* Grid system */
+
+.col-1 {
+    width: calc(8.3333%*1);
+}
+
+.col-2 {
+    width: calc(8.3333%*2);
+}
+
+.col-3 {
+    width: calc(8.3333%*3);
+}
+
+.col-4 {
+    width: calc(8.3333%*4);
+}
+
+.col-5 {
+    width: calc(8.3333%*5);
+}
+
+.col-6 {
+    width: calc(8.3333%*6);
+}
+
+.col-7 {
+    width: calc(8.3333%*7);
+}
+
+.col-8 {
+    width: calc(8.3333%*8);
+}
+
+.col-9 {
+    width: calc(8.3333%*9);
+}
+
+.col-10 {
+    width: calc(8.3333%*10);
+}
+
+.col-11 {
+    width: calc(8.3333%*11);
+}
+
+.col-12 {
+    width: calc(8.3333%*12);
+}

@@ -1,0 +1,185 @@
+.register {
+    width: 100%;
+    background: rgb(170, 145, 199);
+    background: linear-gradient( 0deg, rgba(170, 145, 199, 1) 0%, rgba(115, 153, 189, 1) 27%, rgba(31, 142, 164, 1) 100%);
+    font-family: $raleway;
+    .register-container {
+        width: 80%;
+        margin: 0px auto;
+        padding: 65px 0;
+        .register-content {
+            padding: 50px 0px;
+            text-align: center;
+            h1 {
+                font-size: 30px;
+                font-weight: 500;
+                color: white;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 14px;
+                color: rgb(222, 234, 238);
+            }
+        }
+        .registeration-form {
+            width: 100%;
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            .sign-in {
+                width: 45%;
+                .sign-in-main {
+                    width: 100%;
+                    .sign-in-top {
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: $bg-main;
+                        padding: 15px 40px;
+                        border-radius: 10px 10px 0 0;
+                        .sign-in-top-content {
+                            h3 {
+                                font-size: 18px;
+                                color: rgb(233, 233, 233);
+                                font-weight: 500;
+                                margin-bottom: 20px;
+                            }
+                            p {
+                                font-size: 13px;
+                                color: rgb(233, 233, 233);
+                            }
+                        }
+                        i {
+                            font-size: 50px;
+                            color: rgb(222, 234, 238);
+                        }
+                    }
+                    .sign-in-bottom {
+                        padding: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: $secondary-bg;
+                        border-radius: 0 0 10px 10px;
+                        .sign-in-input {
+                            margin: 5px auto;
+                            width: 92%;
+                            height: 100%;
+                            padding: 20px 30px;
+                            border: none;
+                            border-radius: 5px;
+                            border-right: 1px solid rgba(197, 197, 197, 0.404);
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                        .sign-in-button {
+                            background-color: $bg-secondary;
+                            height: 50px;
+                            padding: 5px 15px;
+                            width: 92%;
+                            margin: 5px auto;
+                            color: #fff;
+                            border-radius: 6px;
+                            border: none;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .sign-in-extra {
+                    text-align: center;
+                    p {
+                        font-size: 20px;
+                        padding-top: 20px;
+                        color: rgb(233, 233, 233);
+                    }
+                    .extra-links {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 20px;
+                        button {
+                            color: white;
+                            padding: 10px 15px;
+                            background-color: $bg-main;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            border: none;
+                            margin-bottom: 5px;
+                            i {
+                                margin-right: 5px;
+                            }
+                        }
+                        @media (max-width: 1000px) {
+                            margin-bottom: 20px;
+                            button {
+                                width: 70%;
+                                margin: 5px auto;
+                            }
+                        }
+                    }
+                }
+            }
+            .sign-up {
+                width: 45%;
+                .sign-up-top {
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: $bg-main;
+                    padding: 15px 40px;
+                    border-radius: 10px 10px 0 0;
+                    .sign-up-top-content {
+                        h3 {
+                            font-size: 18px;
+                            color: rgb(233, 233, 233);
+                            font-weight: 500;
+                            margin-bottom: 20px;
+                        }
+                        p {
+                            font-size: 13px;
+                            color: rgb(233, 233, 233);
+                        }
+                    }
+                    i {
+                        font-size: 50px;
+                        color: rgb(222, 234, 238);
+                    }
+                }
+                .sign-up-bottom {
+                    padding: 15px;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $secondary-bg;
+                    border-radius: 0 0 10px 10px;
+                    .sign-up-input {
+                        margin: 5px auto;
+                        width: 92%;
+                        height: 100%;
+                        padding: 20px 30px;
+                        border: none;
+                        border-radius: 5px;
+                        border-right: 1px solid rgba(197, 197, 197, 0.404);
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .sign-up-button {
+                        background-color: $bg-secondary;
+                        height: 50px;
+                        padding: 5px 15px;
+                        width: 92%;
+                        margin: 5px auto;
+                        color: #fff;
+                        border-radius: 6px;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+            @media (max-width: 1000px) {
+                .sign-in,
+                .sign-up {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

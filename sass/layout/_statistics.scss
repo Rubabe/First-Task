@@ -1,0 +1,42 @@
+.statistics {
+    @include container-full;
+    overflow: hidden;
+    font-family: $raleway;
+    .statistics-wrapper {
+        @include container-full;
+        padding: $padding-xl * 4.5 0;
+        background-image: url(../image/parallax/background-small.jpg);
+        @include parallax;
+        @include flex(flex, "", "", center, "");
+        @media (max-width: 680px) {
+            @include display(block);
+        }
+        .statistics-row {
+            width: 80%;
+            margin: 0 auto;
+            @include flex(flex, "", space-between, center, "");
+            @media (max-width: 680px) {
+                @include display(block);
+            }
+            .statistics-items {
+                @include flex(flex, column, center, center, "");
+                text-align: center;
+                h3 {
+                    @include font($raleway, $font-xl * 1.4, $bold, $white);
+                    margin-bottom: $margin-lg * 5;
+                }
+                span {
+                    @include font($raleway, $font-xs * 1.2, $bold, $white);
+                    margin-top: $margin-lg * 1.5;
+                    text-align: center;
+                }
+                .blue-line {
+                    margin-top: $margin-lg * 4;
+                    width: $width-xxs * 0.6;
+                    height: $height-xs;
+                    background-color: $bg-secondary;
+                }
+            }
+        }
+    }
+}

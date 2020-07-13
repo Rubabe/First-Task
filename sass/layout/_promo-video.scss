@@ -1,0 +1,42 @@
+.promo-video {
+    @include container-full;
+    overflow: hidden;
+    font-family: $roboto;
+    .promo-video-wrapper {
+        @include container-full;
+        padding: $padding-xl * 4.5 0;
+        background-image: url(../image/parallax/background-small2.jpg);
+        @include parallax;
+        .promo-video-content {
+            width: 70%;
+            margin: 0 auto;
+            @include flex(flex, column, "", center, "");
+            text-align: center;
+            h3 {
+                @include font($roboto, $font-xl, $strong-bold, $white);
+                margin-bottom: $margin-xxl;
+            }
+            .promo-video-btn {
+                @include font($roboto, $font-xl/2, $very-bold, $text-details);
+                padding: $padding-lg * 2 $padding-xl;
+                box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+                background: $white;
+                border-radius: 20px;
+                position: $position-main;
+                width: $width-button;
+                @include flex(flex, "", space-between, center, "");
+                &:hover i {
+                    color: $text-secondary;
+                }
+                &:focus {
+                    @include outline(none);
+                }
+                i {
+                    font-size: $font-lg;
+                    color: $text-main;
+                    margin-right: $margin-lg * 3;
+                }
+            }
+        }
+    }
+}

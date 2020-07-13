@@ -1,0 +1,53 @@
+.explore-best-authors {
+    @include container-full;
+    font-family: "Roboto", sans-serif;
+    background-color: #f6f6f6;
+    .explore-authors-wrapper {
+        @include container-full-margin;
+        .section-info {
+            @include section-info;
+        }
+        .listings-cards {
+            @include section-container;
+            @include flex(flex, "", space-between, "", wrap);
+            margin-bottom: $margin-lg * 4;
+            .two-column {
+                @media (min-width: 690px) {
+                    width: 32%;
+                }
+                @media (max-width: 690px) {
+                    width: 100%;
+                }
+                .column-items {
+                    @include column-items;
+                }
+            }
+            .three-column {
+                @media (min-width: 690px) {
+                    width: 65%;
+                }
+                @media (max-width: 690px) {
+                    width: 100%;
+                }
+                .row-two {
+                    @include flex(flex, "", space-between, "", wrap);
+                    .column-items {
+                        @include column-items;
+                        @media (min-width: 690px) {
+                            width: 48%;
+                        }
+                        @media (max-width: 690px) {
+                            width: 100%;
+                        }
+                    }
+                }
+                .column-extra {
+                    @include column-items;
+                }
+            }
+        }
+        .listings-btn {
+            @include listings-btn;
+        }
+    }
+}

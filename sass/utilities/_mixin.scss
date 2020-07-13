@@ -1,0 +1,320 @@
+//---CONTAINER---//
+@mixin container-full-margin {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+}
+
+@mixin container-full {
+    width: 100%;
+}
+
+@mixin section-container {
+    width: 92%;
+    margin: 0 auto;
+}
+
+//---FORMULA---//
+//BORDER//
+@mixin border($width, $style, $color, $radius) {
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+    border-radius: $radius;
+}
+
+//FLEX//
+@mixin flex($display, $direction, $justify, $align, $wrap) {
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//BACKGROUND-TEXT//
+@mixin bg-text-color($bg-color, $text-color) {
+    background: $bg-color;
+    color: $text-color;
+}
+
+//---POSITIONS---//
+//BACKGROUND POSITION//
+@mixin bg-image-center {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+@mixin image-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+//CENTER//
+@mixin bring-center {
+    @extend .absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+@mixin parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//---SMALL CLASSES---//
+//DISPLAY//
+@mixin display($type) {
+    display: $type;
+}
+
+//BORDER//
+@mixin border($type) {
+    border: $type;
+}
+
+//OUTLINE//
+@mixin outline($type) {
+    outline: $type;
+}
+
+//CURSOR//
+@mixin cursor {
+    cursor: pointer;
+}
+
+//---COMMON CLASSES---//
+@mixin quick-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    i {
+        display: block;
+        font-size: 34px;
+    }
+}
+
+@mixin icon-row {
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #566985;
+    font-weight: 700;
+    font-size: 13px;
+    i {
+        color: $text-main;
+        margin-left: 10px;
+    }
+}
+
+@mixin section-info {
+    margin-bottom: 50px;
+    .section-header {
+        color: #697891;
+        font-size: 34px;
+        font-weight: 800;
+        text-align: center;
+        z-index: 2;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "MAGICAL PATHWAY";
+            color: rgba(#697891, 0.1);
+            font-size: 50px;
+            font-weight: 900;
+            //left: 30%;
+            transform: translate(-80%, -10%);
+            z-index: 1;
+            @media (max-width: 1200px) {
+                font-size: 45px;
+                width: 500px;
+            }
+        }
+    }
+    .blue-line {
+        width: 50px;
+        height: 3px;
+        background-color: $bg-secondary;
+        margin: 30px auto;
+        border: none;
+        text-align: center;
+        display: block;
+    }
+    p {
+        color: $text-details;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+@mixin listings-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    .listings-button {
+        padding: 0 15px;
+        border-radius: 4px;
+        background: #384f95;
+        border: 10px solid rgb(218, 215, 215);
+        box-sizing: border-box;
+        color: #fff;
+        overflow: hidden;
+        &:hover i {
+            border: 20px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translateX(40%);
+        }
+        i {
+            transition: all 0.3s ease;
+            color: $text-main;
+            margin-left: 20px;
+            border: 20px solid transparent;
+            border-radius: 50%;
+        }
+    }
+}
+
+@mixin item-description {
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: 20px;
+    &:hover {
+        .bottom-description {
+            p {
+                color: #fff;
+            }
+        }
+    }
+    .top-button {
+        color: #fff;
+        width: fit-content;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+        background-color: #384f95;
+        color: #fff;
+        .top-number {
+            color: $text-main;
+        }
+    }
+    .bottom-description {
+        bottom: 0;
+        transform: translateY(-50%);
+        h4 {
+            font-weight: 700;
+            font-size: 22px;
+            color: #fff;
+        }
+        .blue-line {
+            width: 25px;
+            height: 3px;
+            background-color: $bg-secondary;
+            margin: 10px 0px;
+        }
+        p {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.5s ease;
+            font-size: 16px;
+        }
+    }
+}
+
+@mixin heart-customize {
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #425998;
+    left: 15px;
+    top: 15px;
+    .heart1 {
+        color: white;
+        transform: translate(43%, 48%);
+    }
+    .save {
+        opacity: 0;
+        width: 0;
+        margin-top: 5px;
+    }
+    &:hover {
+        width: 70px;
+        border-radius: 20px;
+        cursor: pointer;
+        .heart1 {
+            opacity: 0;
+        }
+        .save {
+            opacity: 1;
+            display: flex;
+            color: white;
+            transform: translate(13%, 18%);
+            transition: all 0.5s ease;
+            width: auto;
+            .heart2 {
+                color: $text-main;
+            }
+            p {
+                margin-left: 20px;
+            }
+        }
+    }
+    @media (max-width: 720px) {
+        width: 50px;
+        height: 50px;
+        .heart1 {
+            font-size: 25px;
+            transform: translate(50%, 50%);
+        }
+        &:hover {
+            width: 120px;
+            border-radius: 50px;
+            .save {
+                transform: translate(10%, 35%);
+                transition: all 0.5s ease;
+                font-size: 25px;
+                p {
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}
+
+@mixin border-line {
+    border: $borderwidth-sm solid #eee;
+}
+
+@mixin column-items {
+    width: 100%;
+    margin-bottom: $margin-lg * 4;
+    height: $height-card * 0.8;
+    border-radius: $border-lg * 2;
+    overflow: hidden;
+    &:hover img {
+        transform: scale(1.2);
+    }
+    img {
+        @include image-fit;
+        transition: all 0.5s ease;
+    }
+    .item-description {
+        @include item-description;
+    }
+}

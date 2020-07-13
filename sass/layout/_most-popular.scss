@@ -1,0 +1,132 @@
+.most-popular-listings {
+    width: 100%;
+    font-family: $roboto;
+    @extend .section;
+    .most-popular-container {
+        @include section-container;
+        .section-info {
+            @include section-info;
+        }
+        .menu-row {
+            @include flex(flex, "", center, "", "");
+            display: flex;
+            justify-content: center;
+            border-radius: $border-md;
+            margin-bottom: $margin-lg * 6;
+            .menu-items {
+                padding: $padding-lg * 3 $padding-lg * 6;
+                background-color: #f9f9f9;
+                @include border-line;
+                border-right: none;
+                @include font($roboto, $font-lg/2, $bold, $text-details);
+                &:hover {
+                    background-color: $white;
+                }
+                &.menu-item-extra {
+                    border-top-left-radius: $border-lg;
+                    border-bottom-left-radius: $border-lg;
+                    background-color: $bg-secondary;
+                    color: $white;
+                }
+            }
+        }
+        .card-item-row {
+            width: 100%;
+            @extend .relative;
+            @include flex(flex, "", space-between, "", wrap);
+            .card-item {
+                @media (min-width: 960px) {
+                    width: 24%;
+                }
+                @media (min-width: 720px) and (max-width: 960px) {
+                    width: 48%;
+                }
+                @media (max-width: 720px) {
+                    width: 100%;
+                }
+                overflow: hidden;
+                border-radius: 10px;
+                position: $position-main;
+                @include border-line;
+                margin-bottom: $margin-lg * 4;
+                .img-wrapper {
+                    position: $position-main;
+                    width: 100%;
+                    .img {
+                        width: 100%;
+                        height: auto;
+                        transition: all 0.3s ease;
+                    }
+                    i {
+                        position: $position-free;
+                        top: 0px;
+                    }
+                    .heart-customize {
+                        @include heart-customize;
+                    }
+                    .profil-wrapper {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: $borderwidth-lg/5 solid $white;
+                        position: $position-free;
+                        bottom: -$pos-md * 4;
+                        z-index: 3;
+                        right: 0;
+                        margin-right: $margin-xxl/2.5;
+                        transition: all 0.3s ease;
+                        img {
+                            @include image-fit;
+                        }
+                    }
+                }
+                .content-wrapper {
+                    border-top-left-radius: $border-lg * 2;
+                    border-top-right-radius: $border-lg * 2;
+                    padding: $padding-lg * 4;
+                    height: 100%;
+                    background-color: $white;
+                    transform: translateY(-15px);
+                    h1 {
+                        @include font($roboto, $font-xl/2, $bold, $text-heading);
+                        i {
+                            color: $bg-third;
+                        }
+                    }
+                    p {
+                        color: $text-details;
+                        text-align: left;
+                        font-size: $font-lg/2;
+                        padding: $padding-xl 0;
+                        border-bottom: $borderwidth-sm solid #eee;
+                        i {
+                            color: $text-main;
+                        }
+                    }
+                    .description {
+                        @include font($roboto, $font-lg/2, $regular-weight, $text-heading);
+                        padding-bottom: $padding-lg * 2;
+                        line-height: $line-height-description;
+                    }
+                    .facilities {
+                        @include icon-row;
+                    }
+                }
+                &:hover {
+                    .img-wrapper {
+                        .img {
+                            transform: scale(1.2);
+                        }
+                        .profil-wrapper {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+        .listings-btn {
+            @include listings-btn;
+        }
+    }
+}
